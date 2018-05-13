@@ -47,7 +47,7 @@ public class FutsalApplication {
 		};
 	}
 
-	@Bean(destroyMethod="")
+	@Bean(destroyMethod="", value = "jndi")
 	public DataSource jndiDataSource() throws IllegalArgumentException, NamingException {
 		JndiObjectFactoryBean bean = new JndiObjectFactoryBean();
 		bean.setJndiName("java:comp/env/jdbc/myDataSource");
